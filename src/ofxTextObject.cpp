@@ -60,6 +60,9 @@ ofxTextObject::ofxTextObject(ofxSosoTrueTypeFont *iFont, string iString) //LM 06
 ofxTextObject::~ofxTextObject()
 {
 	//PEND write this! BUT DON'T delete font (it's passed in from the outside)
+    
+    words.clear();
+    lines.clear();
 }
 
 void ofxTextObject::init(ofxSosoTrueTypeFont *iFont)
@@ -275,9 +278,7 @@ void ofxTextObject::setAllWordsColor(float iR,  float iG, float iB, float iA)
 void ofxTextObject::enableWordColoring(bool iFlag)
 {
     drawWordColor = iFlag;
-
     if(drawWordColor) enableDisplayList(false); //When word coloring is being used, display lists will break alpha calculations (since they happen inside of render).
-
 }
 
 void ofxTextObject::setColor(float iR, float iG, float iB, float iA)
