@@ -114,7 +114,7 @@ void testApp::setup(){
   //Create a letter text object. This lets you treat each letter as a separate object to animate as you please.
   //See how the letters are animated below in keyPressed()
   //TODO: letterText doesn't have the mapped chars working yet &lsquo; fails
-  letterText = new ofxLetterTextObject(font48, "This is an ofxLetterTextObject™ object using extended characters — initialized with ©Inline escape sequences. Press ‘a’ to animate.");
+  letterText = new ofxLetterTextObject(font48, "This is an ofxLetterTextObject™ object using extended characters — initialized with ©Inline escape sequences. Press &lsquo;a&rsquo; to animate.");
   letterText->setTrans(trans + ofVec3f(0, -unicodeText->getLeading()*10.0, 0));
   letterText->setColor(255, 255, 255);
   letterText->setPointSize(48);
